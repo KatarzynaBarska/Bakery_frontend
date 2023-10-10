@@ -1,0 +1,14 @@
+body {
+    /*background-color: #efebe7;*/
+}
+.Header {
+    width: 100%;
+    height: 10vh;
+    margin: 10px 0;
+    background-color: #efebe7;
+    color: #303030;
+    display: flex;
+    justify-content: center;
+}
+
+
