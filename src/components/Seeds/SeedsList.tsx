@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import {SeedEntity} from 'types';
 import {Spinner} from "../common/Spinner/Spinner";
 import {SeedsTable} from "./SeedsTable";
+import {NavLink} from "react-router-dom";
 
 export const SeedsList = () => {
     const [seedsList, setSeedsList] = useState<SeedEntity[] | null>(null);
@@ -24,8 +25,9 @@ export const SeedsList = () => {
     }
 
     return <div>
-        <h1>Dodatki do chleba</h1>
+        <h1>Wybierz dodatek do chleba</h1>
         <SeedsTable seeds={seedsList} onSeedsChange={refreshSeeds}/>
+        <button><NavLink to='/summary'>Podsumowanie zamówienia</NavLink></button>
     </div>
 
 };
