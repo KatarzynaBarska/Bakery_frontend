@@ -3,7 +3,8 @@ import {SeedsList} from "./components/Seeds/SeedsList";
 import {Route, Routes} from "react-router-dom";
 import {HomeView} from "./views/HomeView";
 import {OrderView} from "./views/OrderView";
-import {Footer} from "./components/Footer/Footer";
+import {SeedsView} from "./views/SeedsView";
+import {SummaryView} from "./views/SummaryView";
 
 
 function App() {
@@ -11,10 +12,11 @@ function App() {
         <>
             <Routes>
                 <Route path="/" element={<HomeView/>}/>
-                <Route path="/seed" element={<SeedsList/>}/>
                 <Route path='/order' element={<OrderView/>}/>
+                <Route path="/seed" element={<SeedsView/>}/>
+                <Route path="/summary" element={<SummaryView/>}/>
             </Routes>
-            <Footer/>
+
         </>
     );
 }
