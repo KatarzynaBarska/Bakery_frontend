@@ -1,7 +1,8 @@
 import React from "react";
-import {HomeView} from "./HomeView";
 import {Logo} from "../components/Logo/Logo";
 import {NavBar} from "../components/NavBar/NavBar";
+import {Footer} from "../components/Footer/Footer";
+import {BasesList} from "../components/Bases/BasesList";
 
 
 export const OrderView = () => {
@@ -9,6 +10,8 @@ export const OrderView = () => {
         <>
             <Logo/>
             <NavBar/>
+            <BasesList/>
+            <Footer/>
         </>
     )
 };
