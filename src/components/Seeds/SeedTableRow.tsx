@@ -1,5 +1,5 @@
 import React from "react";
-import {SeedEntity} from '../../../../Backend/types';
+import {SeedEntity} from 'types';
 
 interface Props {
     seed: SeedEntity;
@@ -13,7 +13,7 @@ export const SeedTableRow = (props: Props) => {
             return;
         }
 
-        const res = await fetch(`https://localhost3001/seed/${props.seed.idSeed}`, {
+        const res = await fetch(`https://localhost3001/${props.seed.idSeed}`, {
             method: 'DELETE',
         });
 

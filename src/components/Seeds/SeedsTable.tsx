@@ -1,5 +1,5 @@
 import React from "react";
-import {SeedEntity} from '../../../../Backend/types';
+import {SeedEntity} from 'types';
 import {SeedTableRow} from "./SeedTableRow";
 
 interface Props {
