@@ -1,0 +1,25 @@
+.Navbar {
+    margin: 1%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Navbar label {
+    margin: 2vw 2vw;
+    padding: 6px;
+    background: #c8b391;
+    border-radius: 15px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+a {
+    color:  #303030;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #715742;
+}
