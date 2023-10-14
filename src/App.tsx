@@ -14,7 +14,7 @@ function App() {
                 <Route path='/order' element={<OrderView/>}/>
                 <Route path="/seed" element={<SeedsView/>}/>
                 <Route path="/summary" element={<SummaryView/>}/>
-                <Route path='/test' element={<SignupForm/>}/>
+                <Route path='/rej' element={<SignupForm/>}/>
             </Routes>
             </>
     );
