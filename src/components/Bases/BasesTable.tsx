@@ -1,11 +1,12 @@
 import React from 'react';
-import {BaseEntity} from 'types';
+import {BaseEntity, SeedEntity} from 'types';
 import {BaseTableRow} from "./BaseTableRow";
 
 
 
 interface Props {
     bases: BaseEntity[];
+    seedsList: SeedEntity[];
     onBaseChange?: () => void;
 }
 
@@ -26,6 +27,7 @@ export const BasesTable = (props: Props) => (
                 <BaseTableRow
                     base={base}
                     key={base.idBase}
+                    seedsList={props.seedsList}
                     onBaseChange={props.onBaseChange}
                 />
             ))

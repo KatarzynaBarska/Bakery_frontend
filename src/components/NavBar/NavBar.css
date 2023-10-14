@@ -1,13 +1,14 @@
 .Navbar {
-    margin: 1%;
+    margin: 0 auto;
     padding: 4px;
+    background-color: #dbc3a3;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .Navbar label {
-    margin: 2vw 2vw;
+    margin: 1vw 1vw;
     padding: 6px;
     background: #c8b391;
     border-radius: 15px;

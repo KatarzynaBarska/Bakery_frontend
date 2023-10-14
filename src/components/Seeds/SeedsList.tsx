@@ -5,8 +5,11 @@ import {Spinner} from "../common/Spinner/Spinner";
 import {SeedsTable} from "./SeedsTable";
 import {NavLink} from "react-router-dom";
 
+import './SeedsList.css';
+
 export const SeedsList = () => {
     const [seedsList, setSeedsList] = useState<SeedEntity[] | null>(null);
+    console.log(seedsList)
 
     const refreshSeeds = async () => {
         setSeedsList(null);
@@ -24,9 +27,10 @@ export const SeedsList = () => {
         return <Spinner/>;
     }
 
-    return <div>
+    return <div className="SeedsList_container">
         <h1>Wybierz dodatek do chleba</h1>
-        <SeedsTable seeds={seedsList} onSeedsChange={refreshSeeds}/>
+        <SeedsTable seeds={seedsList}
+                    onSeedsChange={refreshSeeds}/>
         <button><NavLink to='/summary'>Podsumowanie zamówienia</NavLink></button>
     </div>
 

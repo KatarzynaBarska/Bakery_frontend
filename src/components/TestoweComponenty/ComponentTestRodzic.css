@@ -1,0 +1,12 @@
+.ColorBox__box {
+    margin: 30px auto;
+    width: 250px;
+    height: 250px;
+    border: #ffffff 2px solid;
+    border-radius: 5px;
+}
+.Checkbox {
+    margin: 20px auto;
+    width: 250px;
+text-align: center;
+}

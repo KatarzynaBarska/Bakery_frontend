@@ -1,9 +1,14 @@
 import React from "react";
-import { BaseEntity } from "types";
+import { BaseEntity, SeedEntity } from "types";
+import {BaseSeedSelect} from "../BaseSeedSelect";
+import LogoJPG from "../../assets/Logo.png";
+
+import './BaseTableRow.css'
 
 
 interface Props {
     base: BaseEntity;
+    seedsList: SeedEntity[];
     onBaseChange?: () => void;
 }
 export const BaseTableRow = (props: Props) => {
@@ -23,20 +28,23 @@ export const BaseTableRow = (props: Props) => {
             alert(`Error occurred: ${error.message}`);
             return
         }
-        //props.onBasesChange();
+        //props.onBaseChange);
     };
 
     return (
-        <tr>
-            <td>
-                {props.base.name}
-            </td>
-            <td>
-                {props.base.price}
-            </td>
-            {/*<td>*/}
-            {/*    <a href="/" onClick={deleteSeed}>usuń dodatek</a>*/}
-            {/*</td>*/}
-        </tr>
-    )
+<>
+    <tr>
+    <td>
+        <button>{props.base.name}</button>
+    </td>
+
+    <td>
+        {props.base.price}
+
+    </td>
+</tr>
+
+    </>
+
+)
 }

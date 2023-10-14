@@ -1,6 +1,18 @@
 .Link {
-    background-color: #61dafb;
+    background-color: #decbad;
     height: 65vh;
     width: auto;
+    margin: 0 auto;
+    font-size: 45px;
+    text-align: center;
+}
 
+.Link a {
+    display: flex;
+    justify-content: center;
+}
+.Link__img {
+    width: 40%;
+    height: 70%;
+    margin-top: 20px;
 }

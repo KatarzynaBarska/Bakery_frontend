@@ -4,7 +4,7 @@ import {SeedTableRow} from "./SeedTableRow";
 
 interface Props {
     seeds: SeedEntity[];
-    onSeedsChange?: () => void;
+    onSeedsChange: () => void;
 }
 
 export const SeedsTable = (props: Props) => (

@@ -1,37 +1,37 @@
 import React, {useEffect, useState} from "react";
-import { BaseEntity } from "types";
+import { ListBasesRes } from "types";
 import {Spinner} from "../common/Spinner/Spinner";
 import {BasesTable} from "./BasesTable";
-
-import './BasesList.css';
 import {NavLink} from "react-router-dom";
 
-
+import './BasesList.css';
 
 export const BasesList = () => {
-    const [basesList, setBasesList] = useState<BaseEntity[] | null>(null);
+    const [data, setData] = useState<ListBasesRes | null>(null);
+    console.log(data)
 
-    const refreshBases = async () => {
-        setBasesList(null);
+    const refreshBases = async ()  => {
+        setData(null);
         const res = await fetch('http://localhost:3001/base');
-        const data = await res.json();
-        setBasesList(data.basesList);
+        setData(await res.json());
     };
     useEffect(() => {
             refreshBases();
         },
         []);
 
-    if (basesList === null) {
+    if (data === null) {
         return <Spinner/>;
     }
 
     return <div className='BasesList_container'>
         <h1> Wybierz bazę chleba</h1>
         <BasesTable
-            bases={basesList}
+            bases={data.basesList}
+            seedsList={data.seedsList}
         onBaseChange={refreshBases}
         />
+        <hr/>
         <button><NavLink to='/seed'>Następny krok</NavLink></button>
     </div>
 }

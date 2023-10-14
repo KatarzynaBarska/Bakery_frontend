@@ -1,9 +1,10 @@
 import React from "react";
 import {SeedEntity} from 'types';
+import {Link} from "react-router-dom";
 
 interface Props {
     seed: SeedEntity;
-    onSeedsChange?: () => void;
+    onSeedsChange: () => void;
 }
 export const SeedTableRow = (props: Props) => {
     const deleteSeed = async (e: MouseEvent) => {
@@ -35,7 +36,7 @@ export const SeedTableRow = (props: Props) => {
                 {props.seed.price}
             </td>
             {/*<td>*/}
-            {/*    <a href="/" onClick={deleteSeed}>usuń dodatek</a>*/}
+            {/*    <Link to='/' onClick={deleteSeed}>usuń dodatek</a>*/}
             {/*</td>*/}
         </tr>
     );
