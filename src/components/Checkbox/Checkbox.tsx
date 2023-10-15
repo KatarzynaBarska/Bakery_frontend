@@ -1,6 +1,5 @@
 import React, {FormEvent, useState} from "react";
 import {Simulate} from "react-dom/test-utils";
-import change = Simulate.change;
 
 
 

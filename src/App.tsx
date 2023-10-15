@@ -4,7 +4,7 @@ import {HomeView} from "./views/HomeView";
 import {OrderView} from "./views/OrderView";
 import {SeedsView} from "./views/SeedsView";
 import {SummaryView} from "./views/SummaryView";
-import {SignupForm} from "./components/TestoweComponenty/Forms/test";
+import {SignupForm} from "./components/Forms/test";
 
 function App() {
     return (
