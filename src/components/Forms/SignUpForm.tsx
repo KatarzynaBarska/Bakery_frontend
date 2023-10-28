@@ -1,8 +1,9 @@
 import React from "react";
-import { useFormik } from 'formik';
+import {useFormik} from 'formik';
 
 // import './test.css';
 // import './styles-custom.css';
+
 interface Values {
     firstName: string;
     lastName: string;
@@ -30,7 +31,7 @@ const validate = (values: Values) => {
 
     return errors;
 };
-export  const SignupForm = () => {
+export  const SignUpForm = () => {
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -43,6 +44,7 @@ export  const SignupForm = () => {
         },
     });
     return (
+
         <form onSubmit={formik.handleSubmit}>
             <label htmlFor="firstName">First Name</label>
             <p><input
