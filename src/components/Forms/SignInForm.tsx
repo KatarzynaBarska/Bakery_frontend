@@ -12,9 +12,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import {Logo} from "../Logo/Logo";
-import {NavBar} from "../NavBar/NavBar";
-import {Footer} from "../Footer/Footer";
 
 function Copyright(props: any) {
     return (
