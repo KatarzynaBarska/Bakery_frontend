@@ -2,9 +2,10 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import {HomeView} from "./views/HomeView";
 import {OrderView} from "./views/OrderView";
-import {SeedsView} from "./views/SeedsView";
-import {SummaryView} from "./views/SummaryView";
-import {SignupForm} from "./components/Forms/test";
+import {SingUpView} from "./views/SingUpView";
+import {SingInView} from "./views/SingInView";
+import {CalendarView} from "./views/CalendarView";
+import {GalleryView} from "./views/GalleryView";
 
 function App() {
     return (
@@ -12,9 +13,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomeView/>}/>
                 <Route path='/order' element={<OrderView/>}/>
-                <Route path="/seed" element={<SeedsView/>}/>
-                <Route path="/summary" element={<SummaryView/>}/>
-                <Route path='/rej' element={<SignupForm/>}/>
+                <Route path='/rej' element={<SingUpView/>}/>
+                <Route path='/log' element={<SingInView/>}/>
+                <Route path='/calender' element={<CalendarView/>} />
+                <Route path='/galery' element={<GalleryView/>}/>
             </Routes>
             </>
     );
