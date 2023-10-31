@@ -9,6 +9,7 @@ interface Props {
 
 export const BaseSeedSelect = (props: Props) => {
     const [selected, setSelected] = useState<string>(props.selectedId || '');
+    console.log(selected)
 
     const sendForm = async (e: FormEvent) => {
         e.preventDefault();
@@ -37,7 +38,7 @@ export const BaseSeedSelect = (props: Props) => {
                     </option>
                 ))}
             </select>
-            <button type='submit'>Save</button>
+
         </form>
     )
 }

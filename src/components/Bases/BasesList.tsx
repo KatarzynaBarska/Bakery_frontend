@@ -8,18 +8,21 @@ import './BasesList.css';
 
 export const BasesList = () => {
     const [data, setData] = useState<ListBasesRes | null>(null);
-    console.log(data)
+
 
     const refreshBases = async ()  => {
         setData(null);
         const res = await fetch('http://localhost:3001/base');
         setData(await res.json());
     };
-    useEffect(() => {
-            refreshBases();
-        },
-        []);
 
+    useEffect(() => {
+        (async () => {
+
+            refreshBases();
+
+        })();
+    }, []);
     if (data === null) {
         return <Spinner/>;
     }
@@ -32,6 +35,6 @@ export const BasesList = () => {
         onBaseChange={refreshBases}
         />
         <hr/>
-        <button><NavLink to='/seed'>Następny krok</NavLink></button>
+        <button type="submit"><NavLink to='/summary'>Podsumowanie zamówienia</NavLink></button>
     </div>
 }

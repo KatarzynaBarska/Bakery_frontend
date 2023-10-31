@@ -17,7 +17,10 @@ export const BasesTable = (props: Props) => (
             <th>
                 Nazwa bazy
             </th>
-            <th>Cena bazy</th>
+            <th>Dodatki</th>
+            <th>Cena jednostkowa</th>
+            <th>Ilość sztuk</th>
+            <th>Suma do zapłaty</th>
         </tr>
         </thead>
         <tbody>

@@ -1,9 +1,8 @@
-import React from "react";
+import React, {FormEvent, useState} from "react";
 import { BaseEntity, SeedEntity } from "types";
-import {BaseSeedSelect} from "../BaseSeedSelect";
-import LogoJPG from "../../assets/Logo.png";
 
 import './BaseTableRow.css'
+import {BaseSeedSelect} from "../BaseSeedSelect";
 
 
 interface Props {
@@ -12,6 +11,12 @@ interface Props {
     onBaseChange?: () => void;
 }
 export const BaseTableRow = (props: Props) => {
+    const [numberOfBread, setNumberOfBread] = useState(0);
+
+    const sentForm = (event: FormEvent) => {
+        event.preventDefault();
+    }
+
     const deleteBase = async (e: MouseEvent) => {
         e.preventDefault();
 
@@ -19,7 +24,7 @@ export const BaseTableRow = (props: Props) => {
             return;
         }
 
-        const res = await fetch(`http://localhost3001/${props.base.idBase}`, {
+        const res = await fetch(`http://localhost:3001/${props.base.idBase}`, {
             method: 'DELETE',
         });
 
@@ -28,22 +33,33 @@ export const BaseTableRow = (props: Props) => {
             alert(`Error occurred: ${error.message}`);
             return
         }
-        //props.onBaseChange);
+        //props.onBaseChange();
     };
 
     return (
 <>
     <tr>
-    <td>
-        <button>{props.base.name}</button>
-    </td>
+        <th>{props.base.name}</th>
+        <td>
+            <BaseSeedSelect
+                seedsList={props.seedsList}
+                selectedId={props.base.seedId}
+                idBase={props.base.idBase as string}
+            />
+        </td>
 
-    <td>
-        {props.base.price}
+        <td>{props.base.price} zł </td>
+        <td>
+            <form onSubmit={sentForm}>
+                <input type="number"
+                       value={numberOfBread}
+                       onChange={event=>setNumberOfBread(Number(event.target.value))}/>
+            </form>
+        </td>
+        <td>{props.base.price * props.base.count} zł</td>
+        <td> <button type='submit'>Save</button></td>
 
-    </td>
-</tr>
-
+    </tr>
     </>
 
 )
