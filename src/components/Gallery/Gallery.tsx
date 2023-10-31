@@ -11,6 +11,7 @@ import tortOwoceLas from '../../assets/tortOwoceLas.jpg';
 import tortTofi from '../../assets/tortTofi.jpg';
 
 import './Gallery.css';
+import {ButtonHome} from "../common/ButtonHomePage/ButtonHome";
 
 
 export const BreadGallery = () => {
@@ -70,7 +71,9 @@ export const BreadGallery = () => {
                             <figcaption>Tort owoce leśne</figcaption>
                         </figure>
                     </div>
+
                 </div>
+                <ButtonHome/>
             </div>
         </>
     )
