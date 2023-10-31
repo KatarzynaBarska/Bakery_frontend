@@ -1,4 +1,9 @@
-.Summary_container {
-    background-color: goldenrod;
-    height: 64vh;
+.Summary__container {
+    margin: 20px auto;
+    padding: 20px 20px;
+    background-color: #fed7d7;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
