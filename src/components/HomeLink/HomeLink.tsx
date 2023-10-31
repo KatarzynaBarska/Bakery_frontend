@@ -9,13 +9,17 @@ export const HomeLink = () => {
     return (
         <>
             <div className="Link">
+
                 <NavLink
-                    to='/order'>Zapraszamy na zakupy!</NavLink>
-                <img className="Link__img" src={imgLink} alt="ilustracja przedstawiająca świeży chleb"/>
+                    to='/order'>Nie bądź buła, kupuj chleb !
+                </NavLink>
+
+                <NavLink to='/order'>
+                    <img className="Link__img" src={imgLink} alt="ilustracja przedstawiająca świeży chleb"/>
+                </NavLink>
+
+                <NavLink to='/order'><h4>Złóż zamówienie</h4></NavLink>
             </div>
-
-
-
-            </>
-            )
-            };
+        </>
+    )
+};
