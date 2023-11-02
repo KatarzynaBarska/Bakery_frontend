@@ -11,7 +11,7 @@ import tortOwoceLas from '../../assets/tortOwoceLas.jpg';
 import tortTofi from '../../assets/tortTofi.jpg';
 
 import './Gallery.css';
-import {ButtonHome} from "../common/ButtonHomePage/ButtonHome";
+import {ButtonHome} from "../common/Buttons/ButtonHome";
 
 
 export const BreadGallery = () => {
