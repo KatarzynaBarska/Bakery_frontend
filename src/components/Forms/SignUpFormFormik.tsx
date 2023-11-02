@@ -31,7 +31,7 @@ const validate = (values: Values) => {
 
     return errors;
 };
-export  const SignUpForm = () => {
+export  const SignUpFormFormik = () => {
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -55,7 +55,6 @@ export  const SignUpForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
             /></p>
-            {/*{formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}*/}
             {formik.touched.firstName && formik.errors.firstName ? (
                 <div>{formik.errors.firstName}</div>
             ) : null}
@@ -69,7 +68,6 @@ export  const SignUpForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.lastName}
             /></p>
-            {/*{formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}*/}
             {formik.touched.lastName && formik.errors.lastName ? (
                 <div>{formik.errors.lastName}</div>
             ) : null}
@@ -82,12 +80,12 @@ export  const SignUpForm = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
             /></p>
-            {/*{formik.errors.email ? <div>{formik.errors.email}</div> : null}*/}
 
             {formik.touched.email && formik.errors.email ? (
                 <div>{formik.errors.email}</div>
             ) : null}
             <p><button type="submit">Submit</button></p>
+            <a href="/">powrót do strony głównej</a>
         </form>
     );
 };

@@ -24,8 +24,7 @@ function Copyright(props: any) {
     );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
+const signInFormMaterialUi = createTheme();
 
 export default function SignIn() {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -38,7 +37,7 @@ export default function SignIn() {
     };
 
     return (
-        <ThemeProvider theme={defaultTheme}>
+        <ThemeProvider theme={signInFormMaterialUi}>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
                 <Box
