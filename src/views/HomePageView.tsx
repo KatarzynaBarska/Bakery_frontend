@@ -4,7 +4,7 @@ import {NavBar} from "../components/NavBar/NavBar";
 import {HomeLink} from "../components/HomeLink/HomeLink";
 import {Footer} from "../components/Footer/Footer";
 
-import '../components/HomePage.css'
+import './HomePage.css'
 
 export const HomePageView = () => {
     return (

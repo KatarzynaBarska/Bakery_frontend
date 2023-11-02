@@ -11,14 +11,11 @@ export const HomeLink = () => {
             <div className="Link">
 
                 <NavLink
-                    to='/order'>Nie bądź buła, kupuj chleb ! <br/>
+                    to='/order'>Nie bądź buła, kupuj chleb !
+                    <br/>
                     Złóż zamówienie
                 </NavLink>
-
-                {/*<NavLink to='/order'>*/}
-                    <img className="Link__img" src={imgLink} alt="ilustracja przedstawiająca świeży chleb"/>
-
-                {/*</NavLink>*/}
+                <img className="Link__img" src={imgLink} alt="ilustracja przedstawiająca świeży chleb"/>
 
             </div>
         </>
