@@ -1,0 +1,9 @@
+.Button__home {
+    padding: 7px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    border: none;
+    color: #303030;
+    background-color: #dccdb2;
+}
