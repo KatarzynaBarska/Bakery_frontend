@@ -1,0 +1,25 @@
+.Navbar {
+    font-family: 'Montserrat', serif;
+    margin: 0 auto;
+    padding: 4px;
+    background-color: #dbc3a3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Navbar label {
+    margin: 1vw 1vw;
+    padding: 6px;
+    background: #c8b391;
+    border-radius: 15px;
+}
+
+a {
+    color:  #303030;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #715742;
+}

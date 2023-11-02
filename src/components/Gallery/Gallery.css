@@ -1,0 +1,31 @@
+.Gallery__container {
+    margin: 0 auto;
+    padding: 10px;
+    color: #303030;
+    background-color: #ede9e5;
+    font-family: Montserrat, sans-serif;
+    text-align: start;
+
+}
+
+.Gallery {
+    height: 100%;
+
+}
+
+.Gallery_item {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.Img_gallery {
+    width: 250px;
+    height: 250px;
+}
+figcaption {
+    padding: 10px;
+}

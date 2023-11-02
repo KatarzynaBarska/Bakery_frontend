@@ -1,0 +1,26 @@
+.SeedsTable__container  {
+   background-color: #ede9e5;
+   margin: 20px auto;
+   padding: 20px 20px;
+   font-family: Montserrat, serif;
+}
+
+.SeedsTable__container th {
+   padding: 5px;
+   background-color: #d6c2a3;
+}
+
+.SeedsTable__container td {
+   padding: 3px 5px;
+}
+
+.SeedsTable__container button {
+   margin: 3px;
+   padding: 4px;
+   width: 25%;
+   background-color: #83efbd;
+   border-radius: 5px;
+   border: #83efbd 1px solid;
+   box-shadow: 0 0 7px #9baba1;
+
+}

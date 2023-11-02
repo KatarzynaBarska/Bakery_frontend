@@ -1,0 +1,11 @@
+.Summary__container {
+    margin: 20px auto;
+    padding: 10px 10px;
+    background-color: #d7f0d0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: Montserrat, serif;
+    font-size: large;
+}

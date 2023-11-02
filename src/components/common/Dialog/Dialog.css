@@ -1,0 +1,39 @@
+.Dialog__container {
+    width: 80%;
+    max-width: 800px;
+    margin: 15px auto;
+    border-radius: 15px;
+    background-color: #b2f1d5;
+    color: #2c5b49;
+    box-shadow: 0 0 10px #488069;
+    min-height: 40px;
+    line-height: 40px;
+    font-family: Montserrat, serif;
+}
+.Dialog__title{
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #9be7c3;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 15px;
+}
+.Dialog__content{
+    display: flex;
+    margin: 0 auto;
+    padding: 5px 15px 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Btn__thanks {
+    background-color: #8eecbc;
+    border-radius: 5px;
+    border: #83efbd 1px solid;
+    box-shadow: 0 0 7px #9baba1;
+}
+
+
+
+
