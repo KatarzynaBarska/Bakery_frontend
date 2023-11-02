@@ -1,27 +1,39 @@
 import React, {MouseEvent, useState} from "react";
 import {SeedEntity} from 'types';
+import {ConfirmDialog} from "../common/Dialog/ConfirmDialog";
 
 interface Props {
     oneSeed: SeedEntity;
     onSeedsChange: () => void;
 }
 
-
 export const SeedTableRow = (props: Props) => {
     const [count, setCount] = useState(props.oneSeed.count);
+    const [isConfirmOpen, setConfirmOpen] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newCount = parseInt(e.target.value, 10);
         setCount(newCount);
+    }
 
+    const handleConfirmOpen = () => {
+        setConfirmOpen(true);
+    }
+
+    const handleConfirmClose = () => {
+        setConfirmOpen(false);
+        setCount(0);
     }
 
     const updateSeed = async (e: MouseEvent) => {
         e.preventDefault();
 
-        if (!window.confirm('Are you sure you want to change number of seeds?')) {
+
+        if (!isConfirmOpen) {
+            handleConfirmOpen();
             return;
         }
+
 
         const data = await fetch(`http://localhost:3001/${props.oneSeed.idSeed}`, {
             method: 'PATCH',
@@ -36,7 +48,11 @@ export const SeedTableRow = (props: Props) => {
             alert(`Error occurred: ${error.message}`);
             return;
         }
+
         props.onSeedsChange();
+
+
+        handleConfirmClose();
     }
 
     return (
@@ -44,8 +60,7 @@ export const SeedTableRow = (props: Props) => {
             <tr>
                 <td>{props.oneSeed.name}</td>
                 <td>{props.oneSeed.price.toFixed(2)} zł</td>
-                <td>{props.oneSeed.count} sztuki</td>
-
+                <td><strong>{props.oneSeed.count}</strong> sztuki</td>
                 <td>
                     <input
                         type="number"
@@ -58,32 +73,16 @@ export const SeedTableRow = (props: Props) => {
                 <td>
                     <a href="#" onClick={updateSeed}>Akceptuj</a>
                 </td>
-
             </tr>
 
+            {isConfirmOpen && (
+                <ConfirmDialog title="Potwierdzenie">
+                    Czy na pewno chcesz zmienić zamówienie?
+                    <hr/>
+                    <button onClick={handleConfirmClose}>Nie</button>
+                    <button onClick={updateSeed}>Tak</button>
+                </ConfirmDialog>
+            )}
         </>
-
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

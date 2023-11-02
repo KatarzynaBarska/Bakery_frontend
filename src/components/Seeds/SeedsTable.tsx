@@ -16,10 +16,10 @@ export const SeedsTable = (props: Props) => {
             <table className="SeedsTable__container">
                 <thead>
                 <tr>
-                    <th>nazwa</th>
-                    <th>cena</th>
-                    <th>ilość</th>
-                    <th>wybierz ilość sztuk</th>
+                    <th>Nazwa</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                    <th>Wybierz ilość sztuk</th>
                     <th>Zmiany</th>
                 </tr>
                 </thead>
