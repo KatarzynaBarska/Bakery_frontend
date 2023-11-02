@@ -2,10 +2,6 @@ import React from "react";
 import './Dialog.css';
 
 interface Props {
-    /**
-     * Title of the dialog. You can omit it to disable header in modal.
-     */
-
     title?: string;
     children: React.ReactNode;
 }

@@ -9,7 +9,5 @@ interface Props {
 export const ConfirmDialog = (props: Props) => (
   <Dialog title={props.title}>
       {props.children}
-      <hr/>
-      <button>Yes</button> <button>No</button>
   </Dialog>
 );
