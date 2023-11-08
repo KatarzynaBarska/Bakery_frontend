@@ -1,4 +1,4 @@
-![screen or GIF of your app](assets/LogoJPG.jpg)
+![screen or GIF of your app](src/photo/LogoJPG.jpg)
 
 
 # WIRTUALNA PIEKARNIA
