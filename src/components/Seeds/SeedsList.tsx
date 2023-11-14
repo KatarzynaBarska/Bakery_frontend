@@ -4,6 +4,7 @@ import {Spinner} from "../common/Spinner/Spinner";
 import {SeedsTable} from "./SeedsTable";
 
 import './SeedsList.css';
+import {apiUrl} from "../../config/api";
 
 export const SeedsList = () => {
     const [seedsList, setSeedsList] = useState<SeedEntity[] | null>(null);
@@ -14,7 +15,7 @@ export const SeedsList = () => {
     const refreshSeeds = async () => {
         setSeedsList(null);
 
-        const res = await fetch('http://localhost:3001');
+        const res = await fetch(apiUrl);
         const data = await res.json();
         setSeedsList(data.seedsList);
         setNumberOfSeed(data.seedsList); // add new line

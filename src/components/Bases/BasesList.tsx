@@ -5,6 +5,7 @@ import {BasesTable} from "./BasesTable";
 import {NavLink} from "react-router-dom";
 
 import './BasesList.css';
+import {apiUrl} from "../../config/api";
 
 export const BasesList = () => {
     const [data, setData] = useState<ListBasesRes | null>(null);
@@ -12,7 +13,7 @@ export const BasesList = () => {
 
     const refreshBases = async ()  => {
         setData(null);
-        const res = await fetch('http://localhost:3001/base');
+        const res = await fetch(`${apiUrl}/base`);
         setData(await res.json());
     };
 

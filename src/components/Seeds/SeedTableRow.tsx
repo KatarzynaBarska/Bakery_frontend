@@ -1,6 +1,7 @@
 import React, {MouseEvent, useState} from "react";
 import {SeedEntity} from 'types';
 import {ConfirmDialog} from "../common/Dialog/ConfirmDialog";
+import {apiUrl} from "../../config/api";
 
 interface Props {
     oneSeed: SeedEntity;
@@ -35,7 +36,7 @@ export const SeedTableRow = (props: Props) => {
         }
 
 
-        const data = await fetch(`http://localhost:3001/${props.oneSeed.idSeed}`, {
+        const data = await fetch(`${apiUrl}/${props.oneSeed.idSeed}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

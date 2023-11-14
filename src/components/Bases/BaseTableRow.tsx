@@ -3,6 +3,7 @@ import { BaseEntity, SeedEntity } from "types";
 
 import './BaseTableRow.css'
 import {BaseSeedSelect} from "../BaseSeedSelect";
+import {apiUrl} from "../../config/api";
 
 
 interface Props {
@@ -24,7 +25,7 @@ export const BaseTableRow = (props: Props) => {
             return;
         }
 
-        const res = await fetch(`http://localhost:3001/${props.base.idBase}`, {
+        const res = await fetch(`${apiUrl}/${props.base.idBase}`, {
             method: 'DELETE',
         });
 

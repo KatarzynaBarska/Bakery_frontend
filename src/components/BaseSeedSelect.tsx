@@ -1,5 +1,6 @@
 import React, {FormEvent, useState} from "react";
 import { SeedEntity } from "types";
+import {apiUrl} from "../config/api";
 
 interface Props {
     seedsList: SeedEntity[];
@@ -14,7 +15,7 @@ export const BaseSeedSelect = (props: Props) => {
     const sendForm = async (e: FormEvent) => {
         e.preventDefault();
 
-        await fetch(`http://localhost:3001/base/seed/${props.idBase}`, {
+        await fetch(`${apiUrl}/base/seed/${props.idBase}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
