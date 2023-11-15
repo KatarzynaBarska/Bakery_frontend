@@ -1,6 +1,6 @@
 import React, {FormEvent, useState} from "react";
 import { SeedEntity } from "types";
-import {apiUrl} from "../config/api";
+import {apiUrl} from "../../config/api";
 
 interface Props {
     seedsList: SeedEntity[];

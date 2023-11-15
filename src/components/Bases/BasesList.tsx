@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react";
-import { ListBasesRes } from "types";
+import {ListBasesRes} from "types";
 import {Spinner} from "../common/Spinner/Spinner";
 import {BasesTable} from "./BasesTable";
 import {NavLink} from "react-router-dom";
 
 import './BasesList.css';
-import {apiUrl} from "../../config/api";
 
 export const BasesList = () => {
     const [data, setData] = useState<ListBasesRes | null>(null);
@@ -13,7 +12,7 @@ export const BasesList = () => {
 
     const refreshBases = async ()  => {
         setData(null);
-        const res = await fetch(`${apiUrl}/base`);
+        const res = await fetch(`http://localhost:3001/base`);
         setData(await res.json());
     };
 
